@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Graficas</title>
+</head>
+<body>
+    <div style="width: 30%;">
+        <h1>aa</h1>
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="myChart2" width="400" height="400"></canvas>
+    </div>
+      
+      <script>
+      var ctx = document.getElementById('myChart');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: [1,2,3,4,5,6],
+              datasets: [{
+                  label: 'Ideal',
+                  data: [25, 20, 15, 10, 5, 0],
+                  borderColor: "#EE6868",
+                  backgroundColor: "#EE6868",
+                  lineTension: 0,
+                  borderWidth: 3
+              },
+              {
+                  label: 'Actual',
+                  data: [25, 16, 15, 12, 10, 0],
+                  borderColor: "#03048e",
+                  backgroundColor: "#03048e",
+                  lineTension: 0,
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+      var ctx = document.getElementById('myChart2');
+      var myChart2 = new Chart(ctx, {
+          type: 'radar',
+          data: {
+              labels: [1,2,3,4,5,6],
+              datasets: [{
+                  label: 'Ideal',
+                  data: [25, 20, 15, 10, 5, 0],
+                  borderColor: "#EE6868",
+                  backgroundColor: "#EE6868",
+                  lineTension: 0,
+                  borderWidth: 3
+              },
+              {
+                  label: 'Actual',
+                  data: [25, 16, 15, 12, 10, 0],
+                  borderColor: "#03048e",
+                  backgroundColor: "#03048e",
+                  lineTension: 0,
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+      </script>
+</body>
+</html>
